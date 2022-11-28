@@ -1,5 +1,7 @@
 from scan import Scan
 from portScan import portScan
+from arpSpoofing import ArpSpoofing
+
 
 class main():
     def __init__(self):
@@ -16,6 +18,8 @@ class main():
         attack = input("=>")
         if attack == '2':
             portScan(self.results[self.target])
+        if attack == '3':
+            ArpSpoofing(self.results[self.getaway], self.results[self.target])
 
 
 
